@@ -1,812 +1,935 @@
 <!DOCTYPE html>
-<html lang="en">
-
-
-<!-- Mirrored from bracketweb.com/procounsel-html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 May 2026 07:33:49 GMT -->
+<html lang="mn">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ҮНДСЭН ЭРХ-Хууль зүйн фрим</title>
-    <!-- favicons Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
-    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
-    <meta name="description" content="ProCounsel an ideal solution for all types of law firm and legal businesses. It is a professional and modern looking law HTML Template specially designed for lawyers, attorney, legal advisor, counsel, law firm, consulting business, legal office services and all other law related businesses & websites." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Үндсэн Эрх | Хууль зүйн фирм</title>
 
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Marcellus&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Whisper&amp;display=swap" rel="stylesheet">
+  <!-- ICON -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+  <style>
+    :root{
+      --navy:#0b2237;
+      --navy2:#102f4a;
+      --blue:#2c6f9f;
+      --steel:#6d7f8f;
+      --gray:#eef3f7;
+      --gold:#c6a15b;
+      --white:#fff;
+      --text:#182532;
+      --muted:#667786;
+      --shadow:0 25px 80px rgba(11,34,55,.22);
+      --radius:28px;
+    }
 
-    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/vendors/bootstrap-select/bootstrap-select.min.css" />
-    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
-    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
-    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
-    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
-    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
-    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css" />
-    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css" />
-    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.css" />
-    <link rel="stylesheet" href="assets/vendors/procounsel-icons/style.css" />
-    <link rel="stylesheet" href="assets/vendors/slick/slick.css">
-    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.theme.default.min.css" />
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, "Arial", sans-serif;
+      color:var(--text);
+      background:#f7f9fb;
+      line-height:1.65;
+    }
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1180px,92%);margin:auto}
 
-    <!-- template styles -->
-    <link rel="stylesheet" href="assets/css/procounsel.css" />
+    /* HEADER */
+    header{
+      position:fixed;
+      top:0;left:0;right:0;
+      z-index:999;
+      background:white;
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(255,255,255,.12);
+    }
+    .navbar{
+      height:84px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      color:#fff;
+    }
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      font-weight:800;
+      letter-spacing:.04em;
+    }
+    .logo-box{
+      width:50px;height:50px;
+      border-radius:16px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,rgba(255,255,255,.18),rgba(255,255,255,.05));
+      border:1px solid rgba(255,255,255,.24);
+      color:#fff;
+    }
+    .logo-box i{font-size:23px;color:#d6ecff}
+    .logo small{
+      display:block;
+      color:#c8d8e4;
+      font-weight:500;
+      font-size:11px;
+      letter-spacing:.18em;
+      margin-top:-2px;
+    }
+    nav{
+      display:flex;
+      align-items:center;
+      gap:32px;
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    nav a{
+      position:relative;
+      opacity:.9;
+      color: #4d504e;
+    }
+    nav a:after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-8px;
+      width:0;
+      height:2px;
+      background:#4d504e;
+      transition:.25s;
+    }
+    nav a:hover:after{width:100%}
+    .lang{
+      padding:9px 14px;
+      border:1px solid rgba(255,255,255,.25);
+      border-radius:999px;
+      color:#4d504e;
+    }
+
+    /* HERO SLIDER */
+
+    /* HERO SLIDER */
+.hero{
+  width:100%;
+  aspect-ratio:1983 / 793;
+  min-height:793px;
+  max-height:100vh;
+  position:relative;
+  overflow:hidden;
+  color:#fff;
+  background:#0b2237;
+}
+
+.slider{
+  position:absolute;
+  inset:0;
+  display:flex;
+  width:100%;
+  height:100%;
+  animation:slideMove 18s infinite;
+}
+
+.slide{
+  flex:0 0 100%;
+  width:100%;
+  height:100%;
+  position:relative;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-color:#0b2237;
+}
+
+.slide:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:rgba(0,0,0,.08);
+}
+
+.slide-1{
+  background-image:url("./slide-1.jpg");
+}
+
+.slide-2{
+  background-image:url("./slide-2.jpg");
+}
+
+.slide-3{
+  background-image:url("./slide-3.jpg");
+}
+
+@keyframes slideMove{
+  0%,28%{transform:translateX(0)}
+  33%,61%{transform:translateX(-100%)}
+  66%,94%{transform:translateX(-200%)}
+  100%{transform:translateX(0)}
+}
+
+@media(max-width:980px){
+  .hero{
+    aspect-ratio:auto;
+    height:72vh;
+    min-height:520px;
+  }
+}
+    .hero-content{
+      position:relative;
+      z-index:2;
+      width:min(1180px,92%);
+      margin:auto;
+      padding-top:84px;
+    }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 16px;
+      border-radius:999px;
+      background:rgba(255,255,255,.1);
+      border:1px solid rgba(255,255,255,.18);
+      color:#d6ecff;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      font-size:12px;
+      font-weight:800;
+    }
+    h1{
+      font-size:clamp(42px,7vw,92px);
+      line-height:1.04;
+      letter-spacing:-.055em;
+      max-width:920px;
+      margin:24px 0 22px;
+    }
+    .hero p{
+      font-size:clamp(17px,2vw,22px);
+      max-width:730px;
+      color:#e7f2fa;
+      margin:0;
+    }
+    .actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:36px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:15px 23px;
+      border-radius:999px;
+      font-weight:800;
+      border:1px solid rgba(255,255,255,.24);
+      transition:.25s;
+    }
+    .btn-primary{background:#fff;color:var(--navy)}
+    .btn-outline{color:#fff}
+    .btn:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.22)}
+    .slide-dots{
+      position:absolute;
+      z-index:3;
+      left:50%;
+      bottom:34px;
+      transform:translateX(-50%);
+      display:flex;
+      gap:10px;
+    }
+    .slide-dots span{
+      width:42px;
+      height:4px;
+      border-radius:999px;
+      background:rgba(255,255,255,.35);
+    }
+
+    /* STATS */
+    .stats{
+      margin-top:-74px;
+      position:relative;
+      z-index:5;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+    }
+    .stat{
+      background:#fff;
+      border-radius:24px;
+      padding:26px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(11,34,55,.06);
+    }
+    .stat i{color:var(--blue);font-size:24px;margin-bottom:12px}
+    .stat strong{
+      display:block;
+      color:var(--navy);
+      font-size:34px;
+      line-height:1;
+    }
+    .stat span{
+      color:var(--muted);
+      font-size:13px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+
+    section{padding:96px 0}
+    .eyebrow{
+      color:var(--blue);
+      font-weight:900;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      font-size:12px;
+      margin-bottom:10px;
+    }
+    h2{
+      font-size:clamp(32px,4.5vw,58px);
+      line-height:1.08;
+      letter-spacing:-.045em;
+      color:var(--navy);
+      margin:0 0 22px;
+    }
+    .section-lead{
+      font-size:18px;
+      color:#435463;
+      max-width:850px;
+      margin-bottom:34px;
+    }
+
+    /* ABOUT */
+    .about-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:42px;
+      align-items:start;
+    }
+    .glass-card{
+      background:rgba(255,255,255,.92);
+      border:1px solid rgba(11,34,55,.08);
+      border-radius:var(--radius);
+      padding:34px;
+      box-shadow:0 16px 48px rgba(11,34,55,.10);
+    }
+    .about-text p{font-size:17px;color:#354757}
+    .mission-list{
+      display:grid;
+      gap:16px;
+    }
+    .mission-item{
+      display:grid;
+      grid-template-columns:58px 1fr;
+      gap:18px;
+      padding:22px;
+      border-radius:22px;
+      background:linear-gradient(135deg,#fff,#f0f5f8);
+      border:1px solid #e2ebf1;
+      transition:.25s;
+    }
+    .mission-item:hover{transform:translateY(-4px);box-shadow:0 18px 35px rgba(44,111,159,.12)}
+    .icon{
+      width:58px;height:58px;
+      border-radius:18px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,var(--navy),var(--blue));
+      color:#fff;
+      font-size:23px;
+    }
+    .mission-item h3{
+      margin:0 0 7px;
+      color:var(--navy);
+      font-size:20px;
+    }
+    .mission-item p{margin:0;color:#526371}
+
+    .values-grid{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:16px;
+      margin-top:32px;
+    }
+    .value-card{
+      background:#fff;
+      border:1px solid #e3ebf1;
+      border-radius:22px;
+      padding:24px;
+      min-height:210px;
+      transition:.25s;
+      position:relative;
+      overflow:hidden;
+    }
+    .value-card:before{
+      content:"";
+      position:absolute;
+      inset:0 0 auto 0;
+      height:4px;
+      background:linear-gradient(90deg,var(--blue),var(--gold));
+    }
+    .value-card i{font-size:26px;color:var(--blue);margin-bottom:16px}
+    .value-card h3{margin:0 0 9px;color:var(--navy);font-size:18px}
+    .value-card p{margin:0;color:#5b6b78;font-size:14px}
+    .value-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 18px 36px rgba(11,34,55,.12);
+    }
+
+    /* SERVICES */
+    .services{
+      background:
+        radial-gradient(circle at 20% 20%,rgba(44,111,159,.25),transparent 26%),
+        linear-gradient(135deg,#0b2237,#112f49);
+      color:#fff;
+    }
+    .services h2{color:#fff}
+    .services .section-lead{color:#d7e4ee}
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+    .service-card{
+      border-radius:24px;
+      padding:26px;
+      background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.13);
+      backdrop-filter:blur(14px);
+      min-height:220px;
+      transition:.25s;
+    }
+    .service-card:hover{
+      transform:translateY(-6px);
+      background:rgba(255,255,255,.12);
+      box-shadow:0 20px 45px rgba(0,0,0,.2);
+    }
+    .service-card i{
+      width:52px;height:52px;
+      border-radius:16px;
+      display:grid;
+      place-items:center;
+      background:rgba(255,255,255,.12);
+      color:#bfe3ff;
+      font-size:22px;
+      margin-bottom:16px;
+    }
+    .service-card h3{
+      margin:8px 0 10px;
+      font-size:20px;
+      color:#fff;
+    }
+    .service-card p{
+      margin:0;
+      color:#d8e4ed;
+      font-size:15px;
+    }
+
+    /* CLIENT LOGO SCROLL */
+    .client-marquee{
+      width:100%;
+      overflow:hidden;
+      position:relative;
+      padding:18px 0;
+      margin-top:28px;
+    }
+    .client-marquee:before,
+    .client-marquee:after{
+      content:"";
+      position:absolute;
+      top:0;
+      width:120px;
+      height:100%;
+      z-index:2;
+      pointer-events:none;
+    }
+    .client-marquee:before{
+      left:0;
+      background:linear-gradient(90deg,#f7f9fb,transparent);
+    }
+    .client-marquee:after{
+      right:0;
+      background:linear-gradient(270deg,#f7f9fb,transparent);
+    }
+    .client-track{
+      display:flex;
+      gap:18px;
+      width:max-content;
+      animation:clientScroll 38s linear infinite;
+    }
+    .client-marquee:hover .client-track{
+      animation-play-state:paused;
+    }
+    .client-logo-card{
+      width:210px;
+      height:104px;
+      flex:0 0 210px;
+      background:#fff;
+      border:1px solid #e3ebf1;
+      border-radius:22px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+      box-shadow:0 12px 30px rgba(11,34,55,.08);
+      transition:.25s;
+      overflow:hidden;
+    }
+    .client-logo-card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 18px 42px rgba(11,34,55,.14);
+    }
+    .client-logo-card img{
+      max-width:100%;
+      max-height:78px;
+      object-fit:contain;
+      display:block;
+      filter:grayscale(100%);
+      opacity:.82;
+      transition:.25s;
+    }
+    .client-logo-card:hover img{
+      filter:grayscale(0%);
+      opacity:1;
+    }
+    .client-logo-card .logo-text{
+      font-weight:900;
+      color:#0b2237;
+      text-align:center;
+      line-height:1.18;
+      font-size:17px;
+      letter-spacing:.02em;
+    }
+    @keyframes clientScroll{
+      from{transform:translateX(0)}
+      to{transform:translateX(-50%)}
+    }
+
+    /* CONTACT */
+    .contact-grid{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:28px;
+      align-items:start;
+    }
+    .contact-card{
+      background:#fff;
+      border-radius:var(--radius);
+      padding:32px;
+      box-shadow:0 16px 48px rgba(11,34,55,.10);
+    }
+    .contact-line{
+      display:grid;
+      grid-template-columns:44px 1fr;
+      gap:15px;
+      padding:15px 0;
+      border-bottom:1px solid #edf2f5;
+    }
+    .contact-line:last-child{border-bottom:0}
+    .contact-line i{
+      width:44px;height:44px;
+      border-radius:14px;
+      background:#eef6fb;
+      color:var(--blue);
+      display:grid;
+      place-items:center;
+    }
+    .contact-line b{display:block;color:var(--navy);margin-bottom:3px}
+    iframe{
+      width:100%;
+      height:430px;
+      border:0;
+      border-radius:var(--radius);
+      box-shadow:0 16px 48px rgba(11,34,55,.10);
+    }
+
+    footer{
+      background:#081a2a;
+      color:#b8c8d5;
+      padding:32px 0;
+    }
+    .footer-row{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    /* REVEAL */
+    .reveal{opacity:0;transform:translateY(28px);transition:.8s ease}
+    .reveal.show{opacity:1;transform:none}
+
+    @media(max-width:980px){
+      nav{display:none}
+      .stats,.about-grid,.contact-grid{grid-template-columns:1fr}
+      .values-grid,.service-grid{grid-template-columns:1fr}
+      .stats{margin-top:0;padding-top:24px}
+      .hero{height:auto;min-height:760px}
+      .slide{min-height:760px}
+      h1{font-size:42px}
+    }
+  </style>
 </head>
 
-<body class="custom-cursor">
+<body>
 
-    <div class="custom-cursor__cursor"></div>
-    <div class="custom-cursor__cursor-two"></div>
-
-    <div class="preloader">
-        <div class="preloader__image" style="background-image: url(assets/images/loader.png);"></div>
-    </div>
-    <!-- /.preloader -->
-    <div class="page-wrapper">
-        <header class="main-header main-header--two sticky-header sticky-header--one-page">
-            <div class="main-header__inner">
-                <div class="main-header__logo">
-                    <a href="index.html">
-                        <img src="assets/images/logo.png" alt="Procounsel HTML" width="160">
-                    </a>
-                </div><!-- /.main-header__logo -->
-                <div class="main-header__center">
-                    <div class="topbar-one">
-                        <div class="topbar-one__inner">
-                            <ul class="list-unstyled topbar-one__info">
-                                <li class="topbar-one__info__item">
-                                    <i class="fas fa-map-marker-alt topbar-one__info__icon"></i>
-                                    Монгол Улс, Улаанбаатар хот, Сүхбаатар дүүрэг, 1-р хороо </br>
-                                    “Eco international tower”, 17 давхар, 1704 тоот.
-                                </li>
-                                <li class="topbar-one__info__item">
-                                    <i class="fas fa-envelope topbar-one__info__icon"></i>
-                                    <a href="mailto:Support@gmail.com">info@undsenerkh.com</a>  
-                                </li>
-                                <li class="topbar-one__info__item">
-                                    <i class="fas fa-envelope topbar-one__info__icon"></i> 
-                                    <a href="mailto:Support@gmail.com">undsenerkh@gmail.com</a>
-                                </li>
-                            </ul><!-- /.list-unstyled topbar-one__info -->
-                            <div class="topbar-one__right">
-                                <p class="topbar-one__text"><i class="icon-clock topbar-one__info__icon"></i>
-                                   09.00-18.00 Даваа-Баасан</p><!-- /.topbar-one__text -->
-                            </div><!-- /.topbar-one__right -->
-                        </div><!-- /.topbar-one__inner -->
-                    </div><!-- /.topbar-one -->
-                    <div class="main-header__center__bottom">
-                        <nav class="main-header__nav main-menu">
-                            <ul class="main-menu__list one-page-scroll-menu">
-                                <li class="dropdown megamenu scrollToLink current">
-                                    <a href="#home">ЭХЛЭЛ</a>
-                                </li>
-                                <li class="scrollToLink"><a href="#about">БИДНИЙ ТУХАЙ</a></li>
-                                <li class="scrollToLink"><a href="#services">ҮЙЛЧИЛГЭЭ</a></li>
-                            </ul>
-                        </nav><!-- /.main-header__nav -->
-                        <div class="main-header__center__right">
-                            <div class="mobile-nav__btn mobile-nav__toggler">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div><!-- /.mobile-nav__toggler -->
-                          
-                        </div>
-                    </div>
-                </div>
-                <div class="main-header__right">
-                    <div class="main-header__info">
-                        <div class="main-header__info__icon">
-                            <i class="icon-phone-1"></i>
-                            <span class="main-header__info__icon__zoom">
-                                <i class="icon-phone-1"></i>
-                            </span>
-                        </div>
-                        <div>
-                            <span class="main-header__info__text"></span>
-                            <a href="tel:+97670120207">
-                                70120207
-                                 </br>
-                                99115806
-                                 </br>
-                                88881426
-                            </a>
-                        </div>
-                    </div>
-                </div><!-- /.main-header__right -->
-            </div><!-- /.main-header__inner -->
-        </header><!-- /.main-header -->
-
-        <!-- main-slider-start -->
-        <section class=" main-slider-two" id="home">
-            <div class="main-slider-two__carousel procounsel-owl__carousel owl-carousel" data-owl-options='{
-		"loop": true,
-		"animateOut": "fadeOut",
-		"animateIn": "fadeIn",
-		"items": 1,
-		"autoplay": true,
-		"autoplayTimeout": 7000,
-		"smartSpeed": 1000,
-		"nav": false,
-        "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
-		"dots": true,
-		"margin": 0
-	    }'>
-                <div class="item">
-                    <div class="main-slider-two__item">
-                        <div class="main-slider-two__shape-one" style="background-image: url(assets/images/shapes/hero-banner-2-1-shape.png);"></div>
-                        <div class="main-slider-two__shape-two" style="background-image: url(assets/images/shapes/hero-banner-2-2-shape.png);"></div>
-                        <div class="main-slider-two__bg" style="background-image: url(assets/images/backgrounds/slider-2-1.jpg);"></div><!-- bg -->
-                        <div class="main-slider-two__overlay"></div>
-                        <div class="container text-center">
-                            <div class="main-slider-two__content">
-                                <h3 class="main-slider-two__sub__title">Special Approach, Dedicated Law Attorneys</h3>
-                                <h2 class="main-slider-two__title">
-                                    Need Legal <br>Guidance? Get Your Free <br><span>Consultation Today!</span>
-                                </h2><!-- slider-title -->
-                             
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- item -->
-                <div class="item">
-                    <div class="main-slider-two__item">
-                        <div class="main-slider-two__shape-one" style="background-image: url(assets/images/shapes/hero-banner-2-1-shape.png);"></div>
-                        <div class="main-slider-two__shape-two" style="background-image: url(assets/images/shapes/hero-banner-2-2-shape.png);"></div>
-                        <div class="main-slider-two__bg" style="background-image: url(assets/images/backgrounds/slider-2-2.jpg);"></div><!-- bg -->
-                        <div class="main-slider-two__overlay"></div>
-                        <div class="container text-center">
-                            <div class="main-slider-two__content">
-                                <h3 class="main-slider-two__sub__title">Special Approach, Dedicated Law Attorneys</h3>
-                                <h2 class="main-slider-two__title">
-                                    Need Legal <br>Guidance? Get Your Free <br><span>Consultation Today!</span>
-                                </h2><!-- slider-title -->
-                              
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- item -->
-                <div class="item">
-                    <div class="main-slider-two__item">
-                        <div class="main-slider-two__shape-one" style="background-image: url(assets/images/shapes/hero-banner-2-1-shape.png);"></div>
-                        <div class="main-slider-two__shape-two" style="background-image: url(assets/images/shapes/hero-banner-2-2-shape.png);"></div>
-                        <div class="main-slider-two__bg" style="background-image: url(assets/images/backgrounds/slider-2-3.jpg);"></div><!-- bg -->
-                        <div class="main-slider-two__overlay"></div>
-                        <div class="container text-center">
-                            <div class="main-slider-two__content">
-                                <h3 class="main-slider-two__sub__title">Special Approach, Dedicated Law Attorneys</h3>
-                                <h2 class="main-slider-two__title">
-                                    Need Legal <br>Guidance? Get Your Free <br><span>Consultation Today!</span>
-                                </h2><!-- slider-title -->
-                             
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- item -->
-            </div>
-        </section>
-        <!-- main-slider-end -->
-
-        <!-- Service Start -->
-        <section class="service-two" id="services">
-            <div class="service-two__bg" style="background-image: url(assets/images/backgrounds/service-2-bg.jpg);"></div>
-            <div class="service-two__overlay"></div>
-            <div class="service-two__shape"></div>
-            <div class="container">
-                <div class="service-two__header">
-                    <div class="sec-title text-left">
-
-                        <div class="sec-title__tagline bw-split-in-up-fast d-inline-flex align-items-center gap-2">
-                            <div>
-                                <svg class="hammer" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21.6562 20.875H10.7188C10.5115 20.875 10.3128 20.9573 10.1663 21.1038C10.0198 21.2503 9.9375 21.449 9.9375 21.6562C9.9375 21.8635 10.0198 22.0622 10.1663 22.2087C10.3128 22.3552 10.5115 22.4375 10.7188 22.4375H21.6562C21.8635 22.4375 22.0622 22.3552 22.2087 22.2087C22.3552 22.0622 22.4375 21.8635 22.4375 21.6562C22.4375 21.449 22.3552 21.2503 22.2087 21.1038C22.0622 20.9573 21.8635 20.875 21.6562 20.875Z" />
-                                    <path d="M13.8056 16.9688C13.1943 16.9695 12.6083 17.2126 12.1761 17.6448C11.7439 18.0771 11.5007 18.6631 11.5 19.2744V20.0938H20.875V19.2744C20.8743 18.6631 20.6311 18.0771 20.1989 17.6448C19.7667 17.2126 19.1807 16.9695 18.5694 16.9688H13.8056Z" />
-                                    <path d="M15.9585 13.6149C15.9006 13.6678 15.8349 13.7114 15.7637 13.7442L15.989 13.9696C16.4566 14.4355 17.0898 14.6971 17.7499 14.697C18.41 14.6969 19.0432 14.4352 19.5107 13.9693L21.7812 11.698C22.0124 11.4668 22.1959 11.1924 22.321 10.8903C22.4462 10.5882 22.5106 10.2645 22.5106 9.9375C22.5106 9.61053 22.4462 9.28677 22.321 8.9847C22.1959 8.68263 22.0124 8.40818 21.7812 8.17701L21.5888 7.98456L15.9585 13.6149Z" />
-                                    <path d="M9.2226 7.20295L14.8529 1.57267C14.9108 1.51976 14.9765 1.47611 15.0478 1.44326L14.8224 1.21791C14.3548 0.752021 13.7216 0.490468 13.0615 0.49054C12.4014 0.490611 11.7682 0.752302 11.3007 1.21829L9.03015 3.48915C8.79891 3.72035 8.61548 3.99484 8.49034 4.29694C8.36519 4.59904 8.30078 4.92283 8.30078 5.24982C8.30078 5.57681 8.36519 5.9006 8.49034 6.2027C8.61548 6.5048 8.79891 6.77929 9.03015 7.01049L9.2226 7.20295Z" />
-                                    <path d="M14.3015 12.2813L14.0726 12.5102C13.9993 12.5825 13.9411 12.6687 13.9012 12.7637C13.8613 12.8586 13.8406 12.9605 13.8403 13.0635C13.84 13.1665 13.8601 13.2686 13.8993 13.3638C13.9386 13.459 13.9963 13.5455 14.0691 13.6184C14.142 13.6912 14.2285 13.7489 14.3237 13.7882C14.4189 13.8274 14.521 13.8475 14.624 13.8471C14.727 13.8468 14.8289 13.8261 14.9238 13.7863C15.0188 13.7464 15.105 13.6881 15.1773 13.6149L21.4273 7.36485C21.5716 7.21791 21.6521 7.01992 21.6511 6.81397C21.6502 6.60802 21.568 6.41077 21.4223 6.26514C21.2767 6.11951 21.0795 6.03729 20.8735 6.03635C20.6676 6.03542 20.4696 6.11586 20.3226 6.26016L20.0937 6.48907L16.5113 2.90602L16.7398 2.67735C16.8841 2.53041 16.9646 2.33242 16.9636 2.12647C16.9627 1.92052 16.8805 1.72327 16.7348 1.57764C16.5892 1.43201 16.392 1.34979 16.186 1.34885C15.9801 1.34792 15.7821 1.42836 15.6351 1.57266L9.38514 7.82266C9.31152 7.89496 9.25296 7.98112 9.21283 8.07618C9.17269 8.17123 9.15179 8.27329 9.15132 8.37647C9.15086 8.47965 9.17083 8.5819 9.2101 8.67731C9.24937 8.77273 9.30715 8.85942 9.38011 8.93238C9.45307 9.00534 9.53976 9.06312 9.63518 9.10239C9.73059 9.14166 9.83284 9.16163 9.93602 9.16117C10.0392 9.1607 10.1413 9.1398 10.2363 9.09966C10.3314 9.05953 10.4175 9.00097 10.4898 8.92735L10.7187 8.69844L10.7859 8.76559L1.18201 18.3695C0.953685 18.5955 0.772269 18.8644 0.648189 19.1608C0.524109 19.4571 0.459812 19.7751 0.458992 20.0963C0.458172 20.4176 0.520846 20.7359 0.643411 21.0328C0.765976 21.3298 0.946017 21.5996 1.17319 21.8268C1.40036 22.054 1.67018 22.234 1.96715 22.3566C2.26412 22.4791 2.58239 22.5418 2.90365 22.541C3.22492 22.5402 3.54286 22.4759 3.8392 22.3518C4.13554 22.2277 4.40444 22.0463 4.63045 21.818L14.2344 12.2141L14.3015 12.2813Z" />
-                                </svg>
-                            </div>
-                            Our Services
-                        </div><!-- /.sec-title__tagline -->
-
-                        <h3 class="sec-title__title bw-split-in-up">We’re Providing Best <br><span>Service To Clients</span></h3><!-- /.sec-title__title -->
-                    </div><!-- /.sec-title -->
-                    
-                </div>
-                <div class="row tabs-box">
-                    <div class="col-xl-4 wow fadeInUp" data-wow-delay="200ms">
-                        <ul class="list-unstyled service-two__tab tab-buttons">
-                            <li class="service-two__tab__item tab-btn active-btn" data-tab="#family-law">
-                                <i class="icon-family-law"></i>Family Law
-                            </li>
-                            <li class="service-two__tab__item tab-btn" data-tab="#employment-law">
-                                <i class="icon-employment-law"></i>Employment Law
-                            </li>
-                            <li class="service-two__tab__item tab-btn" data-tab="#healthcare-law">
-                                <i class="icon-healthcare-1"></i>Healthcare Law
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-xl-8 wow fadeInUp" data-wow-delay="300ms">
-                        <div class="tabs-content">
-                            <div class="tab active-tab fadeInUp animated" id="family-law">
-                                <div class="service-two__wrapper">
-                                    <div class="service-two__item">
-                                        <div class="service-two__item__icon">
-                                            <i class="icon-criminal-law"></i>
-                                        </div>
-                                        <h3 class="service-two__item__title">
-                                            <a href="service-d-companion.html">Criminal Law</a>
-                                        </h3><!-- /.service-title -->
-                                        <p class="service-two__item__text">
-                                            There are many free to variations of passages of Lorem Ipsum
-                                        </p>
-                                        <a href="service-d-companion.html" class="service-two__item__link">
-                                            <i class="icon-plus"></i>
-                                        </a>
-                                    </div><!-- /.service-card-two -->
-                                    <div class="service-two__item">
-                                        <div class="service-two__item__icon">
-                                            <i class="icon-real-estate-law"></i>
-                                        </div>
-                                        <h3 class="service-two__item__title">
-                                            <a href="service-d-companion.html">Real Estate Law</a>
-                                        </h3><!-- /.service-title -->
-                                        <p class="service-two__item__text">
-                                            There are many free to variations of passages of Lorem Ipsum
-                                        </p>
-                                        <a href="service-d-companion.html" class="service-two__item__link">
-                                            <i class="icon-plus"></i>
-                                        </a>
-                                    </div><!-- /.service-card-two -->
-                                    <div class="service-two__item">
-                                        <div class="service-two__item__icon">
-                                            <i class="icon-ecommerce-law"></i>
-                                        </div>
-                                        <h3 class="service-two__item__title">
-                                            <a href="service-d-companion.html">Ecommerce Law</a>
-                                        </h3><!-- /.service-title -->
-                                        <p class="service-two__item__text">
-                                            There are many free to variations of passages of Lorem Ipsum
-                                        </p>
-                                        <a href="service-d-companion.html" class="service-two__item__link">
-                                            <i class="icon-plus"></i>
-                                        </a>
-                                    </div><!-- /.service-card-two -->
-                                </div>
-                            </div>
-                            <div class="tab  fadeInUp animated" id="employment-law">
-                                <div class="service-two__wrapper">
-                                    <div class="service-two__item">
-                                        <div class="service-two__item__icon">
-                                            <i class="icon-criminal-law"></i>
-                                        </div>
-                                        <h3 class="service-two__item__title">
-                                            <a href="service-d-companion.html">Criminal Law</a>
-                                        </h3><!-- /.service-title -->
-                                        <p class="service-two__item__text">
-                                            There are many free to variations of passages of Lorem Ipsum
-                                        </p>
-                                        <a href="service-d-companion.html" class="service-two__item__link">
-                                            <i class="icon-plus"></i>
-                                        </a>
-                                    </div><!-- /.service-card-two -->
-                                    <div class="service-two__item">
-                                        <div class="service-two__item__icon">
-                                            <i class="icon-real-estate-law"></i>
-                                        </div>
-                                        <h3 class="service-two__item__title">
-                                            <a href="service-d-companion.html">Real Estate Law</a>
-                                        </h3><!-- /.service-title -->
-                                        <p class="service-two__item__text">
-                                            There are many free to variations of passages of Lorem Ipsum
-                                        </p>
-                                        <a href="service-d-companion.html" class="service-two__item__link">
-                                            <i class="icon-plus"></i>
-                                        </a>
-                                    </div><!-- /.service-card-two -->
-                                    <div class="service-two__item">
-                                        <div class="service-two__item__icon">
-                                            <i class="icon-ecommerce-law"></i>
-                                        </div>
-                                        <h3 class="service-two__item__title">
-                                            <a href="service-d-companion.html">Ecommerce Law</a>
-                                        </h3><!-- /.service-title -->
-                                        <p class="service-two__item__text">
-                                            There are many free to variations of passages of Lorem Ipsum
-                                        </p>
-                                        <a href="service-d-companion.html" class="service-two__item__link">
-                                            <i class="icon-plus"></i>
-                                        </a>
-                                    </div><!-- /.service-card-two -->
-                                </div>
-                            </div>
-                            <div class="tab  fadeInUp animated" id="healthcare-law">
-                                <div class="service-two__wrapper">
-                                    <div class="service-two__item ">
-                                        <div class="service-two__item__icon">
-                                            <i class="icon-criminal-law"></i>
-                                        </div>
-                                        <h3 class="service-two__item__title">
-                                            <a href="service-d-companion.html">Criminal Law</a>
-                                        </h3><!-- /.service-title -->
-                                        <p class="service-two__item__text">
-                                            There are many free to variations of passages of Lorem Ipsum
-                                        </p>
-                                        <a href="service-d-companion.html" class="service-two__item__link">
-                                            <i class="icon-plus"></i>
-                                        </a>
-                                    </div><!-- /.service-card-two -->
-                                    <div class="service-two__item">
-                                        <div class="service-two__item__icon">
-                                            <i class="icon-real-estate-law"></i>
-                                        </div>
-                                        <h3 class="service-two__item__title">
-                                            <a href="service-d-companion.html">Real Estate Law</a>
-                                        </h3><!-- /.service-title -->
-                                        <p class="service-two__item__text">
-                                            There are many free to variations of passages of Lorem Ipsum
-                                        </p>
-                                        <a href="service-d-companion.html" class="service-two__item__link">
-                                            <i class="icon-plus"></i>
-                                        </a>
-                                    </div><!-- /.service-card-two -->
-                                    <div class="service-two__item ">
-                                        <div class="service-two__item__icon">
-                                            <i class="icon-ecommerce-law"></i>
-                                        </div>
-                                        <h3 class="service-two__item__title">
-                                            <a href="service-d-companion.html">Ecommerce Law</a>
-                                        </h3><!-- /.service-title -->
-                                        <p class="service-two__item__text">
-                                            There are many free to variations of passages of Lorem Ipsum
-                                        </p>
-                                        <a href="service-d-companion.html" class="service-two__item__link">
-                                            <i class="icon-plus"></i>
-                                        </a>
-                                    </div><!-- /.service-card-two -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Service End -->
-
-        <section class="about-three" id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-8">
-                        <div class="sec-title text-left">
-
-                            <div class="sec-title__tagline bw-split-in-up-fast d-inline-flex align-items-center gap-2">
-                                <div>
-                                    <svg class="hammer" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M21.6562 20.875H10.7188C10.5115 20.875 10.3128 20.9573 10.1663 21.1038C10.0198 21.2503 9.9375 21.449 9.9375 21.6562C9.9375 21.8635 10.0198 22.0622 10.1663 22.2087C10.3128 22.3552 10.5115 22.4375 10.7188 22.4375H21.6562C21.8635 22.4375 22.0622 22.3552 22.2087 22.2087C22.3552 22.0622 22.4375 21.8635 22.4375 21.6562C22.4375 21.449 22.3552 21.2503 22.2087 21.1038C22.0622 20.9573 21.8635 20.875 21.6562 20.875Z" />
-                                        <path d="M13.8056 16.9688C13.1943 16.9695 12.6083 17.2126 12.1761 17.6448C11.7439 18.0771 11.5007 18.6631 11.5 19.2744V20.0938H20.875V19.2744C20.8743 18.6631 20.6311 18.0771 20.1989 17.6448C19.7667 17.2126 19.1807 16.9695 18.5694 16.9688H13.8056Z" />
-                                        <path d="M15.9585 13.6149C15.9006 13.6678 15.8349 13.7114 15.7637 13.7442L15.989 13.9696C16.4566 14.4355 17.0898 14.6971 17.7499 14.697C18.41 14.6969 19.0432 14.4352 19.5107 13.9693L21.7812 11.698C22.0124 11.4668 22.1959 11.1924 22.321 10.8903C22.4462 10.5882 22.5106 10.2645 22.5106 9.9375C22.5106 9.61053 22.4462 9.28677 22.321 8.9847C22.1959 8.68263 22.0124 8.40818 21.7812 8.17701L21.5888 7.98456L15.9585 13.6149Z" />
-                                        <path d="M9.2226 7.20295L14.8529 1.57267C14.9108 1.51976 14.9765 1.47611 15.0478 1.44326L14.8224 1.21791C14.3548 0.752021 13.7216 0.490468 13.0615 0.49054C12.4014 0.490611 11.7682 0.752302 11.3007 1.21829L9.03015 3.48915C8.79891 3.72035 8.61548 3.99484 8.49034 4.29694C8.36519 4.59904 8.30078 4.92283 8.30078 5.24982C8.30078 5.57681 8.36519 5.9006 8.49034 6.2027C8.61548 6.5048 8.79891 6.77929 9.03015 7.01049L9.2226 7.20295Z" />
-                                        <path d="M14.3015 12.2813L14.0726 12.5102C13.9993 12.5825 13.9411 12.6687 13.9012 12.7637C13.8613 12.8586 13.8406 12.9605 13.8403 13.0635C13.84 13.1665 13.8601 13.2686 13.8993 13.3638C13.9386 13.459 13.9963 13.5455 14.0691 13.6184C14.142 13.6912 14.2285 13.7489 14.3237 13.7882C14.4189 13.8274 14.521 13.8475 14.624 13.8471C14.727 13.8468 14.8289 13.8261 14.9238 13.7863C15.0188 13.7464 15.105 13.6881 15.1773 13.6149L21.4273 7.36485C21.5716 7.21791 21.6521 7.01992 21.6511 6.81397C21.6502 6.60802 21.568 6.41077 21.4223 6.26514C21.2767 6.11951 21.0795 6.03729 20.8735 6.03635C20.6676 6.03542 20.4696 6.11586 20.3226 6.26016L20.0937 6.48907L16.5113 2.90602L16.7398 2.67735C16.8841 2.53041 16.9646 2.33242 16.9636 2.12647C16.9627 1.92052 16.8805 1.72327 16.7348 1.57764C16.5892 1.43201 16.392 1.34979 16.186 1.34885C15.9801 1.34792 15.7821 1.42836 15.6351 1.57266L9.38514 7.82266C9.31152 7.89496 9.25296 7.98112 9.21283 8.07618C9.17269 8.17123 9.15179 8.27329 9.15132 8.37647C9.15086 8.47965 9.17083 8.5819 9.2101 8.67731C9.24937 8.77273 9.30715 8.85942 9.38011 8.93238C9.45307 9.00534 9.53976 9.06312 9.63518 9.10239C9.73059 9.14166 9.83284 9.16163 9.93602 9.16117C10.0392 9.1607 10.1413 9.1398 10.2363 9.09966C10.3314 9.05953 10.4175 9.00097 10.4898 8.92735L10.7187 8.69844L10.7859 8.76559L1.18201 18.3695C0.953685 18.5955 0.772269 18.8644 0.648189 19.1608C0.524109 19.4571 0.459812 19.7751 0.458992 20.0963C0.458172 20.4176 0.520846 20.7359 0.643411 21.0328C0.765976 21.3298 0.946017 21.5996 1.17319 21.8268C1.40036 22.054 1.67018 22.234 1.96715 22.3566C2.26412 22.4791 2.58239 22.5418 2.90365 22.541C3.22492 22.5402 3.54286 22.4759 3.8392 22.3518C4.13554 22.2277 4.40444 22.0463 4.63045 21.818L14.2344 12.2141L14.3015 12.2813Z" />
-                                    </svg>
-                                </div>
-                            </div><!-- /.sec-title__tagline -->
-
-                            <h3 class="sec-title__title bw-split-in-up">БИДНИЙ ТУХАЙ <br><span></span></h3><!-- /.sec-title__title -->
-                        </div><!-- /.sec-title -->
-                        <p class="about-three__text">
-                            Өмгөөллийн “Үндсэн эрх” хууль зүйн фирм нь 2004 онд байгуулагдсан. Монгол Улсад бизнес эрхлэгчид болон хувь хүмүүст мэргэжлийн, итгэл даах хууль зүйн үйлчилгээ үзүүлж ирсэн <br>үндэсний хэмжээний компани юм.
-
-                            <br>
-                            <br>
-                            Өнгөрсөн 22 жилийн хугацаанд бид 500+ байгууллага, 3500+ хувь хүнд хууль эрх зүйн зөвлөгөө, төлөөллийн үйлчилгээ үзүүлж амжилттай шийдвэрлэж ирсэн. Манай баг 30+ чиглэлийн хууль зүйн үйлчилгээ үзүүлдэг.
-                        </p>
-                        <div class="about-three__left">
-                            <div class="about-three__left__img bw-img-anim-left">
-                                <img src="assets/images/resources/about-2-1.jpg" alt="about">
-                            </div>
-                            <div class="about-three__left__content wow fadeInUp" data-wow-delay="200ms">
-                                <div class="about-three__left__top">
-                                    <h3 class="about-three__left__experiance">байгуулагдсан </h3>
-                                    <div class="about-three__left__text">
-                                        <img src="assets/images/shapes/about-2-text.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="about-three__left__bottom">
-                                    <h3 class="about-three__left__bottom-title">Specialized legal knowledge.</h3>
-                                    <ul class="list-unstyled about-three__left__bottom-list">
-                                        <li class="about-three__left__bottom-item">
-                                            <i class="icon-check"></i>
-                                            Documentation: Handles legal paperwork
-                                        </li>
-                                        <li class="about-three__left__bottom-item">
-                                            <i class="icon-check"></i>
-                                            Resources: Access to legal networks
-                                        </li>
-                                        <li class="about-three__left__bottom-item">
-                                            <i class="icon-check"></i>
-                                            Strategy: Tailored legal plans
-                                        </li>
-                                    </ul>
-                                    <div class="about-three__left__bottom-btns">
-                                     
-                                        <img src="assets/images/resources/about-2-signature.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4">
-                        <div class="about-three__right">
-                            <div class="about-three__right-img">
-                                <img class="bw-img-anim-left" src="assets/images/resources/about-2-2.jpg" alt="">
-                                <div class="about-three__right-shape">
-                                    <img src="assets/images/shapes/about-2-shape-1.png" alt="">
-                                </div>
-                            </div>
-                            <div class="about-three__right-icon">
-                                <i class="icon-pillar"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="logos-why-choose">
-            <div class="logos-why-choose__bg jarallax" data-jarallax data-speed="0.3" data-imgPosition="50% -100%" style="background-image: url(assets/images/backgrounds/logos-why-choose-bg.jpg);"></div>
-            <!-- Logos part -->
-            <div class="logos-why-choose__logos">
-                <div class="barnds-one @@extraClassName">
-                    <div class="container">
-                        <div class="barnds-one__inner wow fadeInUp" data-wow-delay="300ms">
-                            <div class="row">
-                                <div class="col-lg-2">
-                                    <div class="barnds-one__text">
-                                        <h3>Харилцагч<br> байгууллагууд</h3>
-                                    </div>
-                                </div>
-                                <div class="col-lg-10">
-                                    <div class="barnds-one__logos">
-                                        <div class="barnds-carousel__one procounsel-owl__carousel procounsel-owl__carousel--basic-nav owl-carousel" data-owl-options='{
-                        "loop": true,
-                        "animateOut": "fadeOut",
-                        "animateIn": "fadeIn",
-                        "items": 6,
-                        "autoplay": false,
-                        "autoplayTimeout": 7000,
-                        "smartSpeed": 1000,
-                        "nav": false,
-                        "navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
-                        "dots": false,
-                        "margin": 0,
-                        "responsive": {
-                            "0": {
-                                "items": 2
-                            },
-                            "600": {
-                                "items": 3
-                            },
-                            "768": {
-                                "items": 4
-                            },
-                            "1200": {
-                                "items": 6
-                            }
-                        }
-                        }'>
-                                            <div class="item">
-                                                <div class="barnds-one__img">
-                                                    <img src="assets/images/resources/brand-1.png" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="barnds-one__img">
-                                                    <img src="assets/images/resources/brand-2.png" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="barnds-one__img">
-                                                    <img src="assets/images/resources/brand-3.png" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="barnds-one__img">
-                                                    <img src="assets/images/resources/brand-4.png" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="barnds-one__img">
-                                                    <img src="assets/images/resources/brand-5.png" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="barnds-one__img">
-                                                    <img src="assets/images/resources/brand-6.png" alt="">
-                                                </div>
-                                            </div>
-                                        </div><!-- /.thm-owl__slider -->
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="logos-why-choose__benefits">
-                <div class="logos-why-choose__benefits__bg" style="background-image: url(assets/images/backgrounds/why-choose-2-bg.jpg);"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-10">
-                            <div class="sec-title text-left">
-
-                                <div class="sec-title__tagline bw-split-in-up-fast d-inline-flex align-items-center gap-2">
-                                    <div>
-                                        <svg class="hammer" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M21.6562 20.875H10.7188C10.5115 20.875 10.3128 20.9573 10.1663 21.1038C10.0198 21.2503 9.9375 21.449 9.9375 21.6562C9.9375 21.8635 10.0198 22.0622 10.1663 22.2087C10.3128 22.3552 10.5115 22.4375 10.7188 22.4375H21.6562C21.8635 22.4375 22.0622 22.3552 22.2087 22.2087C22.3552 22.0622 22.4375 21.8635 22.4375 21.6562C22.4375 21.449 22.3552 21.2503 22.2087 21.1038C22.0622 20.9573 21.8635 20.875 21.6562 20.875Z" />
-                                            <path d="M13.8056 16.9688C13.1943 16.9695 12.6083 17.2126 12.1761 17.6448C11.7439 18.0771 11.5007 18.6631 11.5 19.2744V20.0938H20.875V19.2744C20.8743 18.6631 20.6311 18.0771 20.1989 17.6448C19.7667 17.2126 19.1807 16.9695 18.5694 16.9688H13.8056Z" />
-                                            <path d="M15.9585 13.6149C15.9006 13.6678 15.8349 13.7114 15.7637 13.7442L15.989 13.9696C16.4566 14.4355 17.0898 14.6971 17.7499 14.697C18.41 14.6969 19.0432 14.4352 19.5107 13.9693L21.7812 11.698C22.0124 11.4668 22.1959 11.1924 22.321 10.8903C22.4462 10.5882 22.5106 10.2645 22.5106 9.9375C22.5106 9.61053 22.4462 9.28677 22.321 8.9847C22.1959 8.68263 22.0124 8.40818 21.7812 8.17701L21.5888 7.98456L15.9585 13.6149Z" />
-                                            <path d="M9.2226 7.20295L14.8529 1.57267C14.9108 1.51976 14.9765 1.47611 15.0478 1.44326L14.8224 1.21791C14.3548 0.752021 13.7216 0.490468 13.0615 0.49054C12.4014 0.490611 11.7682 0.752302 11.3007 1.21829L9.03015 3.48915C8.79891 3.72035 8.61548 3.99484 8.49034 4.29694C8.36519 4.59904 8.30078 4.92283 8.30078 5.24982C8.30078 5.57681 8.36519 5.9006 8.49034 6.2027C8.61548 6.5048 8.79891 6.77929 9.03015 7.01049L9.2226 7.20295Z" />
-                                            <path d="M14.3015 12.2813L14.0726 12.5102C13.9993 12.5825 13.9411 12.6687 13.9012 12.7637C13.8613 12.8586 13.8406 12.9605 13.8403 13.0635C13.84 13.1665 13.8601 13.2686 13.8993 13.3638C13.9386 13.459 13.9963 13.5455 14.0691 13.6184C14.142 13.6912 14.2285 13.7489 14.3237 13.7882C14.4189 13.8274 14.521 13.8475 14.624 13.8471C14.727 13.8468 14.8289 13.8261 14.9238 13.7863C15.0188 13.7464 15.105 13.6881 15.1773 13.6149L21.4273 7.36485C21.5716 7.21791 21.6521 7.01992 21.6511 6.81397C21.6502 6.60802 21.568 6.41077 21.4223 6.26514C21.2767 6.11951 21.0795 6.03729 20.8735 6.03635C20.6676 6.03542 20.4696 6.11586 20.3226 6.26016L20.0937 6.48907L16.5113 2.90602L16.7398 2.67735C16.8841 2.53041 16.9646 2.33242 16.9636 2.12647C16.9627 1.92052 16.8805 1.72327 16.7348 1.57764C16.5892 1.43201 16.392 1.34979 16.186 1.34885C15.9801 1.34792 15.7821 1.42836 15.6351 1.57266L9.38514 7.82266C9.31152 7.89496 9.25296 7.98112 9.21283 8.07618C9.17269 8.17123 9.15179 8.27329 9.15132 8.37647C9.15086 8.47965 9.17083 8.5819 9.2101 8.67731C9.24937 8.77273 9.30715 8.85942 9.38011 8.93238C9.45307 9.00534 9.53976 9.06312 9.63518 9.10239C9.73059 9.14166 9.83284 9.16163 9.93602 9.16117C10.0392 9.1607 10.1413 9.1398 10.2363 9.09966C10.3314 9.05953 10.4175 9.00097 10.4898 8.92735L10.7187 8.69844L10.7859 8.76559L1.18201 18.3695C0.953685 18.5955 0.772269 18.8644 0.648189 19.1608C0.524109 19.4571 0.459812 19.7751 0.458992 20.0963C0.458172 20.4176 0.520846 20.7359 0.643411 21.0328C0.765976 21.3298 0.946017 21.5996 1.17319 21.8268C1.40036 22.054 1.67018 22.234 1.96715 22.3566C2.26412 22.4791 2.58239 22.5418 2.90365 22.541C3.22492 22.5402 3.54286 22.4759 3.8392 22.3518C4.13554 22.2277 4.40444 22.0463 4.63045 21.818L14.2344 12.2141L14.3015 12.2813Z" />
-                                        </svg>
-                                    </div>
-                                    Why choose us
-                                </div><!-- /.sec-title__tagline -->
-
-                                <h3 class="sec-title__title bw-split-in-up">You Should Choose Our <br><span>ProCounsel</span></h3><!-- /.sec-title__title -->
-                            </div><!-- /.sec-title -->
-                            <div class="logos-why-choose__benefits__content">
-                                <div class="logos-why-choose__benefits__content__bg"></div>
-                                <div class="logos-why-choose__benefits__content__shape"></div>
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <div class="logos-why-choose__benefits-box">
-                                            <h2 class="logos-why-choose__benefits-box__count"></h2>
-                                            <h4 class="logos-why-choose__benefits-box__title">Legal Protection</h4>
-                                            <p class="logos-why-choose__benefits-box__text">
-                                                It is a long established fact that a reader will be distracted by the readable content
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="logos-why-choose__benefits-box">
-                                            <h2 class="logos-why-choose__benefits-box__count"></h2>
-                                            <h4 class="logos-why-choose__benefits-box__title">Legal Service</h4>
-                                            <p class="logos-why-choose__benefits-box__text">
-                                                It is a long established fact that a reader will be distracted by the readable content
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="logos-why-choose__benefits-box">
-                                            <h2 class="logos-why-choose__benefits-box__count"></h2>
-                                            <h4 class="logos-why-choose__benefits-box__title">Environmental Law</h4>
-                                            <p class="logos-why-choose__benefits-box__text">
-                                                It is a long established fact that a reader will be distracted by the readable content
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div><!-- /.row -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="cta-two">
-            <div class="cta-two__bg" style="background-image: url(assets/images/backgrounds/cta-2-bg.jpg);"></div>
-            <div class="cta-two__overlay"></div>
-            <img class="cta-two__shape-one wow fadeInLeft" data-wow-delay="200ms" src="assets/images/shapes/cta-2-shape-2.png" alt="">
-            <img class="cta-two__shape-two wow fadeInLeft" data-wow-delay="300ms" src="assets/images/shapes/cta-2-shape-3.png" alt="">
-            <img class="cta-two__shape-three wow fadeInRight" data-wow-delay="400ms" src="assets/images/shapes/cta-2-shape-4.png" alt="">
-            <img class="cta-two__shape-four wow fadeInRight" data-wow-delay="500ms" src="assets/images/shapes/cta-2-shape-5.png" alt="">
-            <div class="container">
-                <div class="row d-flex align-items-center">
-                    <div class="col-lg-10 wow fadeInUp" data-wow-delay="00ms">
-                        <img class="cta-two__shape-five" src="assets/images/shapes/cta-2-shape-1.png" alt="">
-                        <h3 class="cta-two__title sec-title__title bw-split-in-up">
-                            Schedule a Confidential <br>
-                            <span>Consultation Now</span>
-                        </h3>
-                        <!-- /.cta-two__title -->
-                        <a href="#" class="procounsel-btn">
-                            <i>Get a Quote</i>
-                            <span>Get a Quote</span>
-                        </a>
-                    </div>
-                </div><!-- /.cta-two__inner -->
-            </div><!-- /.container -->
-        </section><!-- /.cta-two -->
-
-    
-        
-
-        <footer class="main-footer">
-            <div class="main-footer__bg" style="background-image: url(assets/images/backgrounds/footer-bg.png);"></div>
-            <div class="main-footer__top">
-                <div class="container">
-                    <div class="row">
-                      
-                      
-                    </div><!-- /.row -->
-                    <div class="main-footer__info">
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <div class="main-footer__info__inner">
-                                    <div class="main-footer__info__pin">
-                                        <i class="icon-pin"></i>
-                                    </div>
-                                    <div class="main-footer__info__location">
-                                       Монгол Улс, Улаанбаатар хот, Сүхбаатар дүүрэг, 1-р хороо “Eco international tower”, 17 давхар, 1704 тоот 
-                                    </div>
-                                    <ul class="list-unstyled main-footer__info__list">
-                                        <li class="main-footer__info__item">
-                                            <div class="main-footer__info__icon">
-                                                <i class="icon-telephone-call-1"></i>
-                                            </div>
-                                            <div class="main-footer__info__content">
-                                                <p class="main-footer__info__text">
-                                                    <a href="tel:+9238008060">70120207<br>99115806<br>88881426</a>
-                                                </p><!-- /.contact-one__info__text -->
-                                            </div>
-                                        </li>
-                                        <li class="main-footer__info__item">
-                                            <div class="main-footer__info__icon">
-                                                <i class="icon-mail"></i>
-                                            </div>
-                                            <div class="main-footer__info__content">
-                                                <p class="main-footer__info__text">
-                                                    <a href="tel:+2195550114">info@undsenerkh.com undsenerkh@gmail.com</a>
-                                                </p><!-- /.contact-one__info__text -->
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="main-footer__info__social">
-                                    <a href="https://facebook.com/">
-                                        <i class="icon-facebook"></i>
-                                        <span class="sr-only">Facebook</span>
-                                    </a>
-                                    <a href="https://pinterest.com/">
-                                        <i class="icon-pinterest"></i>
-                                        <span class="sr-only">Pinterest</span>
-                                    </a>
-                                    <a href="https://twitter.com/">
-                                        <i class="icon-twitter"></i>
-                                        <span class="sr-only">Twitter</span>
-                                    </a>
-                                    <a href="https://youtube.com/">
-                                        <i class="icon-youtube"></i>
-                                        <span class="sr-only">Youtube</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- /.container -->
-            </div><!-- /.main-footer__top -->
-            <div class="main-footer__bottom  wow fadeInUp" data-wow-delay="00ms">
-                <div class="container">
-                    <div class="main-footer__bottom__inner">
-                        <p class="main-footer__copyright">
-                            &copy;  <span class="dynamic-year"></span> Бүх эрх хуулиар хамгаалагдсан.ҮНДСЭН ЭРХ-Хууль зүйн фирм
-                        </p>
-                    </div><!-- /.main-footer__inner -->
-                </div><!-- /.container -->
-            </div><!-- /.main-footer__bottom -->
-        </footer><!-- /.main-footer -->
-
-    </div><!-- /.page-wrapper -->
-
-
-
-    <div class="mobile-nav__wrapper">
-        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
-        <!-- /.mobile-nav__overlay -->
-        <div class="mobile-nav__content">
-            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
-
-            <div class="logo-box">
-                <a href="index.html" aria-label="logo image"><img src="assets/images/logo-light.png" width="155" alt="" /></a>
-            </div>
-            <!-- /.logo-box -->
-            <div class="mobile-nav__container"></div>
-            <!-- /.mobile-nav__container -->
-
-            <ul class="mobile-nav__contact list-unstyled">
-                <li>
-                    <i class="fa fa-envelope"></i>
-                    <a href="mailto:needhelp@procounsel.com">needhelp@procounsel.com</a>
-                </li>
-                <li>
-                    <i class="fa fa-phone-alt"></i>
-                    <a href="tel:666-888-0000">666 888 0000</a>
-                </li>
-            </ul><!-- /.mobile-nav__contact -->
-            <div class="mobile-nav__social">
-                <a href="https://facebook.com/">
-                    <i class="icon-facebook"></i>
-                    <span class="sr-only">Facebook</span>
-                </a>
-                <a href="https://pinterest.com/">
-                    <i class="icon-pinterest"></i>
-                    <span class="sr-only">Pinterest</span>
-                </a>
-                <a href="https://twitter.com/">
-                    <i class="icon-twitter"></i>
-                    <span class="sr-only">Twitter</span>
-                </a>
-                <a href="https://youtube.com/">
-                    <i class="icon-youtube"></i>
-                    <span class="sr-only">Youtube</span>
-                </a>
-            </div><!-- /.mobile-nav__social -->
-        </div>
-        <!-- /.mobile-nav__content -->
-    </div>
-    <!-- /.mobile-nav__wrapper -->
-    <div class="search-popup">
-        <div class="search-popup__overlay search-toggler"></div>
-        <!-- /.search-popup__overlay -->
-        <div class="search-popup__content">
-            <form role="search" method="get" class="search-popup__form" action="#">
-                <input type="text" id="search" placeholder="Search Here..." />
-                <button type="submit" aria-label="search submit" class="procounsel-btn">
-                    <i><i class="icon-search"></i></i><span><i class="icon-search"></i></span>
-                </button>
-            </form>
-        </div>
-        <!-- /.search-popup__content -->
-    </div>
-    <!-- /.search-popup -->
-
-    <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
-        <span class="scroll-to-top__text">back top</span>
-        <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
+<header>
+  <div class="container navbar">
+    <a href="#home" class="logo">
+      <img src="logo.png" alt="Үндсэн Эрх лого" style="height:58px;width:auto;object-fit:contain;display:block;">
     </a>
 
+    <nav>
+      <a href="#home">Нүүр</a>
+      <a href="#intro">Танилцуулга</a>
+      <a href="#services">Үйлчилгээ</a>
+      <a href="#clients">Харилцагчид</a>
+      <a href="#contact">Холбоо барих</a>
+      <span class="lang">MN / EN / KO</span>
+    </nav>
+  </div>
+</header>
 
-    <script src="assets/vendors/jquery/jquery-3.7.1.min.js"></script>
-    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
-    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
-    <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
-    <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
-    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
-    <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
-    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
-    <script src="assets/vendors/nouislider/nouislider.min.js"></script>
-    <script src="assets/vendors/tiny-slider/tiny-slider.js"></script>
-    <script src="assets/vendors/wnumb/wNumb.min.js"></script>
-    <script src="assets/vendors/owl-carousel/js/owl.carousel.min.js"></script>
-    <script src="assets/vendors/wow/wow.js"></script>
-    <script src="assets/vendors/imagesloaded/imagesloaded.min.js"></script>
-    <script src="assets/vendors/isotope/isotope.js"></script>
-    <script src="assets/vendors/slick/slick.min.js"></script>
-    <script src="assets/vendors/tilt/tilt.jquery.js"></script>
-    <script src="assets/vendors/countdown/countdown.min.js"></script>
-    <script src="assets/vendors/jquery-circleType/jquery.circleType.js"></script>
-    <script src="assets/vendors/jquery-lettering/jquery.lettering.min.js"></script>
-    <!-- gsap js -->
-    <script src="assets/vendors/gsap/gsap.js"></script>
-    <script src="assets/vendors/gsap/scrolltrigger.min.js"></script>
-    <script src="assets/vendors/gsap/splittext.min.js"></script>
-    <script src="assets/vendors/gsap/procounsel-split.js"></script>
-    <!-- template js -->
-    <script src="assets/js/procounsel.js"></script>
+<section id="home" class="hero">
+  <div class="slider">
+    <div class="slide slide-1"></div>
+    <div class="slide slide-2"></div>
+    <div class="slide slide-3"></div>
+  </div>
+
+  <div class="slide-dots">
+    <span></span><span></span><span></span>
+  </div>
+</section>
+
+<div class="container stats reveal">
+  <div class="stat"><i class="fa-solid fa-calendar-days"></i><strong>22+</strong><span>жилийн туршлага</span></div>
+  <div class="stat"><i class="fa-solid fa-building-columns"></i><strong>500+</strong><span>байгууллага</span></div>
+  <div class="stat"><i class="fa-solid fa-users"></i><strong>3500+</strong><span>хувь хүн</span></div>
+  <div class="stat"><i class="fa-solid fa-briefcase"></i><strong>30+</strong><span>мэргэшсэн чиглэл</span></div>
+</div>
+
+<section id="intro">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <div class="eyebrow">Танилцуулга</div>
+        <h2>Үндэсний туршлага, олон улсын жишигт нийцсэн үйлчилгээ</h2>
+        <p>
+          Өмгөөллийн “Үндсэн эрх” хууль зүйн фирм нь 2004 онд байгуулагдсан.
+          Монгол Улсад бизнес эрхлэгчид болон хувь хүмүүст мэргэжлийн, итгэл даах хууль зүйн үйлчилгээ үзүүлж ирсэн үндэсний хэмжээний компани юм.
+        </p>
+        <p>
+          Өнгөрсөн 22 жилийн хугацаанд бид 500+ байгууллага, 3500+ хувь хүнд хууль эрх зүйн зөвлөгөө, төлөөллийн үйлчилгээ үзүүлж амжилттай шийдвэрлэж ирсэн.
+        </p>
+        <p>
+          “Үндсэн эрх” фирм нь 8 мэргэшсэн өмгөөлөгч, хуульч, эрх зүйчийн багаар дамжуулан 30+ чиглэлийн хууль зүйн үйлчилгээ үзүүлдэг бөгөөд практикт суурилсан туршлага, мэргэжлийн өндөр ур чадвар, стратегийн шийдэлд тулгуурлан ажилладаг.
+        </p>
+      </div>
+
+      <div class="mission-list reveal">
+        <div class="mission-item">
+          <div class="icon"><i class="fa-solid fa-eye"></i></div>
+          <div>
+            <h3>Алсын хараа</h3>
+            <p>Монгол Улсад шударга ёс, эрх зүйн соёлыг бэхжүүлж, бизнес болон иргэдийн эрх ашгийг олон улсын жишигт нийцсэн мэргэжлийн үйлчилгээгээр хамгаалдаг тэргүүлэгч хууль зүйн фирм байна.</p>
+          </div>
+        </div>
+
+        <div class="mission-item">
+          <div class="icon"><i class="fa-solid fa-bullseye"></i></div>
+          <div>
+            <h3>Эрхэм зорилго</h3>
+            <p>Бид үйлчлүүлэгч бүрийн эрх ашиг, бизнесийн үнэт зүйл, хууль ёсны хамгаалалтыг нэн тэргүүнд тавьж, хараат бус, ёс зүйтэй, өндөр мэргэжлийн хууль зүйн үйлчилгээг үзүүлнэ.</p>
+          </div>
+        </div>
+
+        <div class="mission-item">
+          <div class="icon"><i class="fa-solid fa-lock"></i></div>
+          <div>
+            <h3>Мэргэжлийн зарчим</h3>
+            <p>Ёс зүй, нууцлал, хариуцлага, мэргэжлийн стандартыг дээд түвшинд мөрдөж, олон улсын жишигт нийцсэн хууль зүйн үйлчилгээг тууштай хүргэнэ.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="values-grid reveal">
+      <div class="value-card">
+        <i class="fa-solid fa-scale-balanced"></i>
+        <h3>Шударга байдал</h3>
+        <p>Бид хууль дээдлэх зарчим, мэргэжлийн ёс зүйг үйл ажиллагааныхаа үндэс болгодог.</p>
+      </div>
+      <div class="value-card">
+        <i class="fa-solid fa-handshake"></i>
+        <h3>Итгэлцэл</h3>
+        <p>Үйлчлүүлэгчтэйгээ урт хугацааны, нээлттэй, найдвартай хамтын ажиллагааг эрхэмлэнэ.</p>
+      </div>
+      <div class="value-card">
+        <i class="fa-solid fa-book-open"></i>
+        <h3>Мэргэжлийн чадвар</h3>
+        <p>Олон улсын жишиг, бодит туршлага, нарийн судалгаанд суурилсан үйлчилгээ үзүүлнэ.</p>
+      </div>
+      <div class="value-card">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h3>Хариуцлага</h3>
+        <p>Бид гаргасан шийдвэр, зөвлөгөө бүртээ өндөр хариуцлагатай хандана.</p>
+      </div>
+      <div class="value-card">
+        <i class="fa-solid fa-user-shield"></i>
+        <h3>Нууцлал</h3>
+        <p>Үйлчлүүлэгчийн мэдээллийн аюулгүй байдал, бизнесийн нууцыг чанд хамгаална.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="container">
+    <div class="eyebrow">Мэргэшсэн чиглэл</div>
+    <h2>Хууль зүйн үйлчилгээ</h2>
+    <p class="section-lead">
+      Бид бизнес, иргэн, байгууллагын эрх ашгийг хамгаалах чиглэлээр зөвлөгөө, баримт бичиг боловсруулах, маргаан шийдвэрлэх, өмгөөлөл, төлөөллийн үйлчилгээ үзүүлнэ.
+    </p>
+
+    <div class="service-grid">
+      <div class="service-card reveal">
+        <i class="fa-solid fa-scale-balanced"></i>
+        <h3>Авлига</h3>
+        <p>Авлигын эсрэг хууль тогтоомжийн хүрээнд зөвлөгөө, эрсдэлийн үнэлгээ, өмгөөлөл үзүүлнэ.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-file-contract"></i>
+        <h3>Ажил гүйцэтгэх гэрээ</h3>
+        <p>Ажил гүйцэтгэх гэрээ боловсруулах, дүгнэлт гаргах, маргаан шийдвэрлэх үйлчилгээ.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-handshake-angle"></i>
+        <h3>Арбитр & Эвлэрүүлэн зуучлал</h3>
+        <p>Арбитр болон эвлэрүүлэн зуучлалын ажиллагаанд төлөөлөл, эрх зүйн зөвлөгөө үзүүлнэ.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-briefcase"></i>
+        <h3>Арилжаа & Бизнесийн эрх зүй</h3>
+        <p>Бизнесийн үйл ажиллагаа, арилжааны гэрээ хэлцэл, компанийн эрх зүйн зөвлөгөө.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-mountain"></i>
+        <h3>Ашигт малтмалын маргаан</h3>
+        <p>Ашигт малтмал, уул уурхайн үйл ажиллагаатай холбоотой маргааны шийдэл.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-building-columns"></i>
+        <h3>Банк & Санхүү</h3>
+        <p>Банк, санхүү, хөрөнгө оруулалт, зээлийн эрх зүйн зөвлөгөө.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-city"></i>
+        <h3>Барилга & Дэд бүтэц</h3>
+        <p>Барилга, дэд бүтцийн төсөл, гэрээ, эрх зүйн эрсдэлийн зөвлөгөө.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-passport"></i>
+        <h3>Гадаадын иргэн & Цагаачлал</h3>
+        <p>Гадаадын иргэн, хөрөнгө оруулагчийн виз, оршин суух зөвшөөрлийн үйлчилгээ.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-people-roof"></i>
+        <h3>Гэр бүлийн эрх зүй</h3>
+        <p>Өв залгамжлал, гэрлэлт цуцлалт, хүүхдийн асран хамгаалалт, тэтгэлэг зэрэг зөвлөгөө.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <h3>Газрын маргаан</h3>
+        <p>Газрын өмчлөл, эзэмшил, ашиглалттай холбоотой маргааны шийдвэрлэлт.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h3>Даатгал</h3>
+        <p>Даатгалын гэрээ, нөхөн төлбөр, даатгалын маргааны зөвлөгөө.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-file-invoice-dollar"></i>
+        <h3>Дампуурал</h3>
+        <p>Дампуурал, төлбөрийн чадваргүй байдлын эрх зүйн үйлчилгээ.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <h3>Гэм хор</h3>
+        <p>Гэм хор, хохиролтой холбоотой нөхөн төлбөрийн маргааны өмгөөлөл.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-pen-nib"></i>
+        <h3>Гэрээ, хэлцэл</h3>
+        <p>Гэрээ боловсруулах, хянах, хэлцлийн эрх зүйн зөвлөгөө.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-user-secret"></i>
+        <h3>Залилан, санхүүгийн гэмт хэрэг</h3>
+        <p>Залилан, санхүүгийн гэмт хэрэгтэй холбоотой эрх зүйн хамгаалалт.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-landmark"></i>
+        <h3>Захиргааны эрх зүй</h3>
+        <p>Төрийн байгууллагын шийдвэр, үйл ажиллагаатай холбоотой эрх зүйн зөвлөгөө.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-gavel"></i>
+        <h3>Захиргааны хэрэг хянан шийдвэрлэх ажиллагаа</h3>
+        <p>Захиргааны хэргийн шүүхэд төлөөлөл, маргаан шийдвэрлэх үйлчилгээ.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-user-tie"></i>
+        <h3>Иргэний эрх зүй</h3>
+        <p>Иргэний эрх зүйн бүх төрлийн зөвлөгөө, өмгөөлөл.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-clipboard-list"></i>
+        <h3>Иргэний хэрэг хянан шийдвэрлэх ажиллагаа</h3>
+        <p>Иргэний хэрэг хянан шийдвэрлэх ажиллагаанд төлөөлөл үзүүлнэ.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-sitemap"></i>
+        <h3>Компани</h3>
+        <p>Компанийн засаглал, хувьцаа эзэмшил, бүтэцтэй холбоотой зөвлөгөө.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-stamp"></i>
+        <h3>Тендер</h3>
+        <p>Тендер, худалдан авах ажиллагааны эрх зүйн зөвлөгөө.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-money-check-dollar"></i>
+        <h3>Зээл</h3>
+        <p>Зээл, өр төлбөр, санхүүгийн үүрэгтэй холбоотой асуудал.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-key"></i>
+        <h3>Түрээс & Эд хөрөнгө хөлслөх</h3>
+        <p>Түрээс, эд хөрөнгө хөлслөх гэрээ болон маргааны үйлчилгээ.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-handshake"></i>
+        <h3>Хамтран ажиллах гэрээ</h3>
+        <p>Хамтын ажиллагаа, хөрөнгө оруулалтын гэрээ боловсруулах үйлчилгээ.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-house-lock"></i>
+        <h3>Өмч, эд хөрөнгө</h3>
+        <p>Өмч, эд хөрөнгийн хамгаалалт, шилжилт, маргааны зөвлөгөө.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-user-shield"></i>
+        <h3>Өмгөөлөл</h3>
+        <p>Шүүх болон эрх бүхий байгууллагад хууль зүйн төлөөлөл үзүүлнэ.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-check-to-slot"></i>
+        <h3>Сонгууль</h3>
+        <p>Сонгуулийн эрх зүй, маргаан, хууль зүйн зөвлөгөө.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3>Үнэт цаас & Хөрөнгийн зах зээл</h3>
+        <p>Үнэт цаас, хөрөнгийн зах зээлтэй холбоотой эрх зүйн үйлчилгээ.</p>
+      </div>
+      <div class="service-card reveal">
+        <i class="fa-solid fa-magnifying-glass-chart"></i>
+        <h3>Хуулийн магадлан шинжилгээ & Шүүх</h3>
+        <p>Хуулийн магадлан шинжилгээ болон шүүхийн бүх шатны ажиллагаанд өмгөөлөл, төлөөлөл үзүүлнэ.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="clients">
+  <div class="container">
+    <div class="eyebrow">Харилцагчид</div>
+    <h2>Харилцагчид</h2>
+    <p class="section-lead">Лого зургуудыг <b>logos</b> хавтаст доорх нэрээр байрлуулбал автоматаар ижил хэмжээтэй гарч, тасралтгүй гүйнэ.</p>
+
+    <div class="client-marquee">
+      <div class="client-track">
+        <div class="client-logo-card"><img src="logos/erdenet.png" alt="Эрдэнэт үйлдвэр ХХК" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="logo-text" style="display:none">Эрдэнэт үйлдвэр ХХК</span></div>
+        <div class="client-logo-card"><img src="logos/eco-construction.png" alt="Эко констракшн ХХК" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="logo-text" style="display:none">Эко констракшн ХХК</span></div>
+        <div class="client-logo-card"><img src="logos/ncd.png" alt="NCD Group" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="logo-text" style="display:none">NCD Group</span></div>
+        <div class="client-logo-card"><img src="logos/golomt-bank.png" alt="Голомт банк" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="logo-text" style="display:none">Голомт банк</span></div>
+        <div class="client-logo-card"><img src="logos/golomt-capital.png" alt="Голомт капитал" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="logo-text" style="display:none">Голомт капитал</span></div>
+        <div class="client-logo-card"><img src="logos/tenger-capital.png" alt="Тэнгэр капитал" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="logo-text" style="display:none">Тэнгэр капитал</span></div>
+        <div class="client-logo-card"><img src="logos/monos.png" alt="Монос групп" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="logo-text" style="display:none">Монос групп</span></div>
+        <div class="client-logo-card"><img src="logos/ezcon.png" alt="EZCON ХХК" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="logo-text" style="display:none">EZCON ХХК</span></div>
+        <div class="client-logo-card"><img src="logos/sj-logistics.png" alt="SJ Logistics Group" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="logo-text" style="display:none">SJ Logistics Group</span></div>
+        <div class="client-logo-card"><img src="logos/mgl-vip.png" alt="MGL VIP GROUP LLC" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="logo-text" style="display:none">MGL VIP GROUP LLC</span></div>
+        <div class="client-logo-card"><img src="logos/erdenet.png" alt="Эрдэнэт үйлдвэр ХХК" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="logo-text" style="display:none">Эрдэнэт үйлдвэр ХХК</span></div>
+        <div class="client-logo-card"><img src="logos/eco-construction.png" alt="Эко констракшн ХХК" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="logo-text" style="display:none">Эко констракшн ХХК</span></div>
+        <div class="client-logo-card"><img src="logos/ncd.png" alt="NCD Group" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="logo-text" style="display:none">NCD Group</span></div>
+        <div class="client-logo-card"><img src="logos/golomt-bank.png" alt="Голомт банк" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="logo-text" style="display:none">Голомт банк</span></div>
+        <div class="client-logo-card"><img src="logos/golomt-capital.png" alt="Голомт капитал" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="logo-text" style="display:none">Голомт капитал</span></div>
+        <div class="client-logo-card"><img src="logos/tenger-capital.png" alt="Тэнгэр капитал" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="logo-text" style="display:none">Тэнгэр капитал</span></div>
+        <div class="client-logo-card"><img src="logos/monos.png" alt="Монос групп" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="logo-text" style="display:none">Монос групп</span></div>
+        <div class="client-logo-card"><img src="logos/ezcon.png" alt="EZCON ХХК" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="logo-text" style="display:none">EZCON ХХК</span></div>
+        <div class="client-logo-card"><img src="logos/sj-logistics.png" alt="SJ Logistics Group" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="logo-text" style="display:none">SJ Logistics Group</span></div>
+        <div class="client-logo-card"><img src="logos/mgl-vip.png" alt="MGL VIP GROUP LLC" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="logo-text" style="display:none">MGL VIP GROUP LLC</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container contact-grid">
+    <div class="reveal">
+      <div class="eyebrow">Холбоо барих</div>
+      <h2>Зөвлөгөө авах, уулзалт товлох</h2>
+      <p class="section-lead">
+        Таны асуудлыг нууцлалтай, мэргэжлийн түвшинд судалж, хамгийн оновчтой эрх зүйн шийдлийг санал болгоно.
+      </p>
+
+      <div class="contact-card">
+        <div class="contact-line">
+          <i class="fa-solid fa-location-dot"></i>
+          <div><b>Хаяг</b>Монгол Улс, Улаанбаатар хот, Сүхбаатар дүүрэг, 1-р хороо, “Eco International Tower”, 17 давхар, 1704 тоот.</div>
+        </div>
+        <div class="contact-line">
+          <i class="fa-solid fa-phone"></i>
+          <div><b>Утас</b>70120207, 99115806, 88881426</div>
+        </div>
+        <div class="contact-line">
+          <i class="fa-solid fa-envelope"></i>
+          <div><b>Имэйл</b>info@undsenerkh.com<br>undsenerkh@gmail.com</div>
+        </div>
+        <div class="contact-line">
+          <i class="fa-solid fa-clock"></i>
+          <div><b>Ажлын цаг</b>09:00–18:00, Даваа–Баасан</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <iframe loading="lazy" src="https://www.google.com/maps?q=Eco%20International%20Tower%20Ulaanbaatar&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-row">
+    <div>© 2026 Үндсэн Эрх Хууль Зүйн Фирм. Бүх эрх хуулиар хамгаалагдсан.</div>
+    <div>www.undsenerkh.mn</div>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+      }
+    })
+  },{threshold:.14});
+
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+
 </body>
-
-
-<!-- Mirrored from bracketweb.com/procounsel-html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 May 2026 07:36:07 GMT -->
 </html>
